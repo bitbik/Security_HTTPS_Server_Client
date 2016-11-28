@@ -18,9 +18,10 @@ int SSL_library_init(void)?
 //including load ciphers, error messages, 
 //create server instances, create ssl context
 SSL_CTX* svr_ini_opssl_lib( ){
-	SSL_library_init();
+	
 	const SSL_METHOD *method;
 	SSL_CTX *ctx;
+	SSL_library_init();
 	/* load & register all cryptos, etc. */
 	OpenSSL_add_all_algorithms();		
 	/* load all error messages */
